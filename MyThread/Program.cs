@@ -9,7 +9,7 @@ namespace MyThread
         {
             //ThreadTest.Show1();
             //ThreadTest.Show2();
-            ThreadTest.Show6();
+            ThreadTest.Show5();
             Console.ReadKey();
         }
     }

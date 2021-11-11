@@ -6,4 +6,5 @@
 - **MyThread**：Thread的使用
 - **MyThreadPool**：ThreadPool的使用
 - **MyTask**：Task的使用
+- **MyParallel**：Parallel的使用
 - **MyAsyncAwait**：Async/Await

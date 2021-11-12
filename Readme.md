@@ -7,4 +7,5 @@
 - **MyThreadPool**：ThreadPool的使用
 - **MyTask**：Task的使用
 - **MyParallel**：Parallel的使用
+- **MyThreadCore**：多线程使用中的一些注意事项
 - **MyAsyncAwait**：Async/Await

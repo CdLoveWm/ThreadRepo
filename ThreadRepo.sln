@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyThreadPool", "MyThreadPoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTask", "MyTask\MyTask.csproj", "{F8B05269-ABBC-4285-BF07-385119C4F677}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyParallel", "MyParallel\MyParallel.csproj", "{84161529-DE46-4C53-AB32-1E5A9F708018}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F8B05269-ABBC-4285-BF07-385119C4F677}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8B05269-ABBC-4285-BF07-385119C4F677}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8B05269-ABBC-4285-BF07-385119C4F677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84161529-DE46-4C53-AB32-1E5A9F708018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84161529-DE46-4C53-AB32-1E5A9F708018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84161529-DE46-4C53-AB32-1E5A9F708018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84161529-DE46-4C53-AB32-1E5A9F708018}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyTask", "MyTask\MyTask.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyParallel", "MyParallel\MyParallel.csproj", "{84161529-DE46-4C53-AB32-1E5A9F708018}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyThreadCore", "MyThreadCore\MyThreadCore.csproj", "{72542C21-6613-4294-84E0-BFD7BAE35D22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyThreadCore", "MyThreadCore\MyThreadCore.csproj", "{72542C21-6613-4294-84E0-BFD7BAE35D22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAsyncAwait", "MyAsyncAwait\MyAsyncAwait.csproj", "{00E20988-6304-4EBE-A19A-D5A672C7E009}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{72542C21-6613-4294-84E0-BFD7BAE35D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72542C21-6613-4294-84E0-BFD7BAE35D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72542C21-6613-4294-84E0-BFD7BAE35D22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00E20988-6304-4EBE-A19A-D5A672C7E009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00E20988-6304-4EBE-A19A-D5A672C7E009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00E20988-6304-4EBE-A19A-D5A672C7E009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00E20988-6304-4EBE-A19A-D5A672C7E009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

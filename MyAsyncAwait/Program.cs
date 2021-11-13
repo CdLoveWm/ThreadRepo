@@ -10,7 +10,8 @@ namespace MyAsyncAwait
         {
             Console.WriteLine($"主线程在main中开始执行...【{Thread.CurrentThread.ManagedThreadId}】");
             AsyncAwaitTest awaitTest = new AsyncAwaitTest();
-            awaitTest.Show1();
+            //awaitTest.Show1();
+            awaitTest.Show5();
             Console.WriteLine($"主线程在main中结束执行...【{Thread.CurrentThread.ManagedThreadId}】");
             Console.ReadKey();
         }
@@ -97,6 +98,31 @@ namespace MyAsyncAwait
         {
             await Task.Run(() => Task.Delay(100));
             return "我是返回值";
+        }
+        /// <summary>
+        /// Task的ContinueWith代替async/await
+        /// </summary>
+        /// <returns></returns>
+        public void Show5()
+        {
+            Console.WriteLine($"Show1 开始执行...【{Thread.CurrentThread.ManagedThreadId}】");
+
+            Task.Run(() => TimeConsumingMethod1()).ContinueWith(t => {
+                Console.WriteLine($"耗时方法1 执行之后...【{Thread.CurrentThread.ManagedThreadId}】");
+                Console.WriteLine("------------------------");
+                
+                Task.Run(() => TimeConsumingMethod2()).ContinueWith(t1 => {
+                    Console.WriteLine($"耗时方法2 执行之后...【{Thread.CurrentThread.ManagedThreadId}】");
+                    Console.WriteLine("------------------------");
+                    
+                    Task.Run(() => TimeConsumingMethod3()).ContinueWith(t2 => {
+                        Console.WriteLine($"耗时方法3 执行之后...【{Thread.CurrentThread.ManagedThreadId}】");
+                        Console.WriteLine($"Show1 结束执行...【{Thread.CurrentThread.ManagedThreadId}】");
+                        Console.WriteLine("------------------------");
+                    });
+                });
+            });
+            
         }
     }
 }

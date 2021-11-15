@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace MyLock
@@ -7,38 +9,27 @@ namespace MyLock
     {
         static void Main(string[] args)
         {
-            MyLockTest.TestLock();
+
+            //TestLock(MySpinLock.SpinLock1);
+            //Console.WriteLine(MySpinLock.Count1);
+            //Console.WriteLine(MySpinLock.Count2);
+
+            TestLock(MySpinLock.SpinLock2);
+            Console.WriteLine(MySpinLock.Count1);
+            Console.WriteLine(MySpinLock.Count2);
+
+
             Console.ReadKey();
         }
-    }
-    /// <summary>
-    /// 锁
-    /// </summary>
-    public class MyLockTest
-    {
-        private static readonly object _lock = new object();
-        private static int i = 0;
-        public static void TestLock()
-        {
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-            Task.Run(()=> MyLockTest.Show1());
-        }
 
-        public static void Show1()
+        public static void TestLock(Action action)
         {
-            //lock (_lock)
-            //{
-                Console.WriteLine(++i);
-            //}
+            List<Task> tasks = new List<Task>();
+            for (int i = 0; i < 200; i++)
+            {
+                tasks.Add(Task.Run(action));
+            }
+            Task.WaitAll(tasks.ToArray());
         }
-
     }
 }

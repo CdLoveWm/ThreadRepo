@@ -27,6 +27,10 @@ namespace MyLock
             //TestLock(MyMutex.Show);
             //Console.WriteLine(MyMutex.Count1);
             //Console.WriteLine(MyMutex.Count2);
+
+            // 防止程序多开
+            //MyMutex.Show2();
+
             #endregion
 
             Console.ReadKey();

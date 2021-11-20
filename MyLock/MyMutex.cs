@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -15,6 +16,9 @@ namespace MyLock
         private static Mutex mutex = new Mutex();
         public static int Count1 = 0;
         public static int Count2 = 0;
+        /// <summary>
+        /// 互斥锁演示
+        /// </summary>
         public static void Show()
         {
             bool waitHandle = false;
@@ -32,6 +36,27 @@ namespace MyLock
                 if(waitHandle)
                     mutex.ReleaseMutex(); // 释放锁
             }
+        }
+
+        /// <summary>
+        /// 防止程序多开
+        /// </summary>
+        public static void Show2()
+        {
+            Mutex mutex = new Mutex(false, "", out bool flag);
+            if (flag)
+            {
+                Console.WriteLine("程序正常运行");
+            }
+            else
+            {
+                Console.WriteLine("已有程序在运行，不能同时多开, 5秒后退出！");
+                Task.Delay(5000).ContinueWith(t =>
+                {
+                    Environment.Exit(0);
+                });
+            }
+
         }
     }
 }

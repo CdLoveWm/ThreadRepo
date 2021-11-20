@@ -123,6 +123,24 @@ namespace MyLock
 
             #endregion
 
+            #region 读写锁
+
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    MyReadWriteLock.Write(i.ToString(), $"值{i}");
+            //}
+
+            //while (true)
+            //{
+            //    for (int i = 0; i < 3; i++)
+            //    {
+            //        string value = MyReadWriteLock.Read(new Random().Next(100).ToString());
+            //        Console.WriteLine($"获取到值： {value}");
+            //    }
+            //}
+
+            #endregion
+
             Console.ReadKey();
         }
 

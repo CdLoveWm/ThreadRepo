@@ -15,6 +15,9 @@ namespace MyLock
         private static Semaphore semaphore = new Semaphore(1, int.MaxValue);
         public static int Count1;
         public static int Count2;
+        /// <summary>
+        /// 信号量使用演示
+        /// </summary>
         public static void Show1()
         {
             try
@@ -34,7 +37,9 @@ namespace MyLock
                 int a = semaphore.Release();
             }
         }
-
+        /// <summary>
+        /// 信号量防止程序多开
+        /// </summary>
         public static void Show2()
         {
             Semaphore semaphore1 = new Semaphore(1, 5, "test", out bool flag);

@@ -112,6 +112,16 @@ namespace MyLock
 
             #endregion
 
+            #region 信号量
+
+            //TestLock(MySemaphore.Show1);
+            //Console.WriteLine(MySemaphore.Count1);
+            //Console.WriteLine(MySemaphore.Count2);
+
+            //// 防止程序多开
+            //MySemaphore.Show2();
+
+            #endregion
 
             Console.ReadKey();
         }

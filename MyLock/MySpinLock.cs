@@ -48,8 +48,6 @@ namespace MyLock
 
                 Count1++;
                 Count2++;
-                var spinWait = new SpinWait();
-                spinWait.SpinOnce();
             }
             finally
             {

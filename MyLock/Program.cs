@@ -10,14 +10,24 @@ namespace MyLock
         static void Main(string[] args)
         {
 
+            #region 自旋锁
+            // 使用Interlocked实现自旋锁
             //TestLock(MySpinLock.SpinLock1);
             //Console.WriteLine(MySpinLock.Count1);
             //Console.WriteLine(MySpinLock.Count2);
 
-            TestLock(MySpinLock.SpinLock2);
-            Console.WriteLine(MySpinLock.Count1);
-            Console.WriteLine(MySpinLock.Count2);
+            // 自带的自旋锁
+            //TestLock(MySpinLock.SpinLock2);
+            //Console.WriteLine(MySpinLock.Count1);
+            //Console.WriteLine(MySpinLock.Count2);
+            #endregion
 
+            #region 互斥锁
+
+            //TestLock(MyMutex.Show);
+            //Console.WriteLine(MyMutex.Count1);
+            //Console.WriteLine(MyMutex.Count2);
+            #endregion
 
             Console.ReadKey();
         }

@@ -110,6 +110,14 @@ namespace MyLock
 
             #endregion
 
+            #region Lock强转的数字
+
+            //TestLock(MyMonitor.Show5);
+            //Console.WriteLine(MyMonitor.Count1);
+            //Console.WriteLine(MyMonitor.Count2);
+
+            #endregion
+
             #endregion
 
             #region 信号量
@@ -143,8 +151,17 @@ namespace MyLock
 
             #region 死锁
 
-            Task.Run(() => DeadLock.Show1());
-            Task.Run(() => DeadLock.Show2());
+            //// 死锁
+            //Task.Run(() => DeadLock.Show1());
+            //Task.Run(() => DeadLock.Show2());
+
+            //// Monitor避免死锁
+            //Task.Run(() => DeadLock.Show3());
+            //Task.Run(() => DeadLock.Show4());
+
+            // Monitor 活锁
+            Task.Run(() => DeadLock.Show5());
+            Task.Run(() => DeadLock.Show6());
 
             #endregion
 

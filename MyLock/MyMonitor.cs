@@ -75,5 +75,19 @@ namespace MyLock
                 Count2++;
             }
         }
+
+        private static int num = 5;
+        /// <summary>
+        /// Lock((object)number)测试
+        /// lock 强转的数字测试
+        /// </summary>
+        public static void Show5()
+        {
+            lock ((object)num)
+            {
+                Count1++;
+                Count2++;
+            }
+        }
     }
 }

@@ -10,4 +10,4 @@
 - **MyThreadCore**：多线程使用中的一些注意事项
 - **MyAsyncAwait**：Async/Await
 - **MyInterlocked**：原子操作
-- **MyLock**：C#中的锁
+- **MyLock**：C#中的各种锁，以及死锁/活锁

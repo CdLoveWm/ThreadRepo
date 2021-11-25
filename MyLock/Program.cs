@@ -141,6 +141,13 @@ namespace MyLock
 
             #endregion
 
+            #region 死锁
+
+            Task.Run(() => DeadLock.Show1());
+            Task.Run(() => DeadLock.Show2());
+
+            #endregion
+
             Console.ReadKey();
         }
 
